@@ -1,12 +1,14 @@
 struct Factures{
     int ID;
+    int type; //credit = 0 | debit = 1
     int prixHT;
     int prixTTC;
-    char date;
+    int day;
+    int month;
     char categorie;
 };
 
-struct Factures T[3];
+struct Factures liste_Facture[3];
 
 int initialisation() {
     for (int i = 0; i < 3; ++i){
@@ -14,9 +16,10 @@ int initialisation() {
         factureTemporaire.ID;
         factureTemporaire.prixHT;
         factureTemporaire.prixTTC;
-        factureTemporaire.date;
+        factureTemporaire.day;
+        factureTemporaire.month;
         factureTemporaire.categorie;
-        T[i] = factureTemporaire;
+        liste_Facture[i] = factureTemporaire;
     }
     return 0;
 }
