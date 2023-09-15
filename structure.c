@@ -13,7 +13,7 @@ struct Factures liste_Facture[3];
 int initialisation() {
     for (int i = 0; i < 3; ++i){
         struct Factures factureTemporaire;
-        factureTemporaire.ID = -1;
+        factureTemporaire.ID;
         factureTemporaire.prixHT;
         factureTemporaire.prixTTC;
         factureTemporaire.day;
