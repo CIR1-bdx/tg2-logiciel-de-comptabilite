@@ -8,5 +8,4 @@ int main (){
     prixBase = TVA(prixBase);
     printf("Voila le prix avec la TVA : %.2f \n", TVA(prixBase));
     return 0;
-
-    }
+}
