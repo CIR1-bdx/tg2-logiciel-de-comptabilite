@@ -1,5 +1,5 @@
 struct Factures{
-    int factureID;
+    int ID;
     int prixHT;
     int prixTTC;
     char date;
@@ -11,7 +11,7 @@ struct Factures T[3];
 int initialisation() {
     for (int i = 0; i < 3; ++i){
         struct Factures factureTemporaire;
-        factureTemporaire.factureID = i+1;
+        factureTemporaire.ID;
         factureTemporaire.prixHT;
         factureTemporaire.prixTTC;
         factureTemporaire.date;
