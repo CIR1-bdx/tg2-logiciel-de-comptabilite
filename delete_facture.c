@@ -1,12 +1,12 @@
 //
 // Created by arno.dubois on 15-Sep-23.
 //
-// Entrée -> id de la facture
+// Fonction pour supprimer une facture
+// Entrée -> id de la facture à supprimer de type entier
 // Sortie -> Pas de sortie
 //
 
 void deleteFacture(int factureID) {
-    char flag;
     for (int i = 0; Factures[i]; ++i) {
         if (Factures[i].ID == factureID) {
             Factures[i].ID = -1;
@@ -15,10 +15,7 @@ void deleteFacture(int factureID) {
             Factures.date = 0;
             Factures.categorie = 0;
 
-            flag = 1;
+            return;
         }
-    } if(flag == 0) {
-        printf("La facture n°%d n'a pas été trouvée", factureID);
-    }
-
+    } printf("La facture n°%d n'a pas été trouvée", factureID);
 }
