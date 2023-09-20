@@ -1,24 +1,16 @@
-//
-// Created by arno.dubois on 15-Sep-23.
-//
-// Entrée -> id de la facture
-// Sortie -> Pas de sortie
-//
+#include "structure.c"
+#include <stdio.h>
 
 void deleteFacture(int factureID) {
-    char flag;
-    for (int i = 0; Factures[i]; ++i) {
-        if (Factures[i].ID == factureID) {
-            Factures[i].ID = -1;
-            Factures.prixHT = 0;
-            Factures.prixTTC = 0;
-            Factures.date = 0;
-            Factures.categorie = 0;
-
-            flag = 1;
+    for (int i = 0; i<10; ++i) {
+        if (liste_Facture[i].ID == factureID) {
+            liste_Facture[i].ID = -1;
+            liste_Facture[i].prixHT = 0;
+            liste_Facture[i].prixTTC = 0;
+            liste_Facture[i].day = 0;
+            liste_Facture[i].month = 0;
+            liste_Facture[i].categorie = 0;
+            return;
         }
-    } if(flag == 0) {
-        printf("La facture n°%d n'a pas été trouvée", factureID);
-    }
-
+    } printf("La facture n°%d n'a pas été trouvée", factureID);
 }

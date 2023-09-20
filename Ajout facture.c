@@ -1,14 +1,15 @@
 #include <stdio.h>
+#include "structure.c"
 
 
-int ajout_facture (char montant, char categorie, char date, char liste[]){
+int ajout_facture (char montant, char categorie, char day, char month, char type, char liste[]){
     if (recherche_place() >= 0){
-        T[0].prixHT = montant;
-        T[1].prixTTC =
-        T[2] = categorie;
-        T[3] = date;
-        T[4] = recherche_place();
-        liste[recherche_place()] = T[] ;
+        liste_Facture[recherche_place()].prixHT = montant;
+        liste_Facture[recherche_place()].categorie = categorie;
+        liste_Facture[recherche_place()].day = day;
+        liste_Facture[recherche_place()].month = month;
+        liste_Facture[recherche_place()].ID = recherche_place();
+        liste_Facture[recherche_place()].type = type
         return 1;
 
     }else{
