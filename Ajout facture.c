@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "structure.c"
 
 
 int ajout_facture (char montant, char categorie, char day, char month, char type, char liste[]){
