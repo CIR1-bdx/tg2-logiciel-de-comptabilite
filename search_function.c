@@ -1,6 +1,3 @@
-//
-// Created by arno.dubois on 20-Sep-23.
-//
 
 #include "structure.c"
 #include <stdio.h>
