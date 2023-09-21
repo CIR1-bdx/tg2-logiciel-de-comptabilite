@@ -8,7 +8,7 @@ int searchSpace() {
             return i;
         }
     }
-    printf("Plus d'éspace disponible pour les facture");
+    //printf("Plus d'éspace disponible pour les facture");
     return -1;
 }
 
@@ -18,6 +18,6 @@ int searchFacture(int factureID) {
             return i;
         }
     }
-    printf("La facture n°%d n'a pas été trouvée", factureID);
+    //printf("La facture n°%d n'a pas été trouvée", factureID);
     return -1;
 }
