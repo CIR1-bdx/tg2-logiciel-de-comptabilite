@@ -1,10 +1,13 @@
 # include <stdio.h>
-#include "structure.c"
+# include "structure.c"
 
-int montant_imposable (int chiffre_affaires) {
-    printf("Quel est votre chiffre d'affaires? :\n");
-    scanf("%d",&chiffre_affaires);
-    int montant_imp = chiffre_affaires - (categorie_L + categorie_V);
-    return montant_imp;
-    printf("Votre montant imposable est de %d euros.\n",montant_imp);
+int montant_imposable () {
+
+    int taxable_amount;
+    for (int i = 0; i < 10; ++i) {
+        if(liste_Facture[i].type == 0 && (liste_Facture[i].categorie == 'L' || liste_Facture[i].categorie == 'V' )){
+            taxable_amount += liste_Facture[i].prixTTC ;
+        }
+    }
+    printf("Votre montant imposable est de %d euros.\n",taxable_amount);
 }
