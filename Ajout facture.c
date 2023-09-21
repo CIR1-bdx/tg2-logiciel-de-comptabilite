@@ -3,7 +3,7 @@
 #include "search_function.c"
 
 
-int ajout_facture (char montant, char categorie, char day, char month, char type, char liste[]){
+int ajout_facture (char montant, char categorie, char day, char month, char type){
     if (searchSpace() >= 0){
         liste_Facture[searchSpace()].prixHT = montant;
         liste_Facture[searchSpace()].categorie = categorie;
