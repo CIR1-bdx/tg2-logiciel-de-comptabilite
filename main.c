@@ -13,11 +13,6 @@ int touteslesfactures() {
     }
 };
 
-
-
-
-
-
 int main () {
     while (1){
         char choice;
