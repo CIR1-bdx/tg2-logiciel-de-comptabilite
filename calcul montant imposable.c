@@ -1,7 +1,7 @@
 # include <stdio.h>
 # include "structure.c"
 
-int montant_imposable () {
+int montant_imposable(){
 
     int taxable_amount;
     for (int i = 0; i < 10; ++i) {
@@ -10,4 +10,5 @@ int montant_imposable () {
         }
     }
     printf("Votre montant imposable est de %d euros.\n",taxable_amount);
+    return 0;
 }

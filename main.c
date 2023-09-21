@@ -5,6 +5,8 @@
 #include "Calcul montant gagné ou perdue.c"
 #include "delete_facture.c"
 #include "afficher_facture.c"
+#include "facturesjrm.c"
+#include "calcul montant imposable.c"
 
 
 int touteslesfactures() {
@@ -45,36 +47,51 @@ int main () {
             case 1: calcul_TVA ();break;
             case 2: list(); break;
             case 3: printf("Veuillez entrer le prix HT : \n");
-                scanf("%d",&montant);
-                printf("Veuillez entrer la catégorie : \n");
-                scanf("%c",&cat);
-                printf("Veuillez entrer le jour : \n");
-                scanf("%c",&day);
-                printf("Veuillez entrer le mois : \n");
-                scanf("%c",&month);
-                printf("Veuillez entrer le type (0 pour credit, 1 pour debit) : \n");
-                scanf("%c",&type);
-                int add_facture=ajout_facture (montant,cat,day,month,type);
-                if (add_facture == -1){
-                    printf("Aucune place disponible pour les factures.\n");
-                } else {
+            scanf("%d",&montant);
+            printf("Veuillez entrer la catégorie : \n");
+            scanf("%c",&cat);
+            printf("Veuillez entrer le jour : \n");
+            scanf("%c",&day);
+            printf("Veuillez entrer le mois : \n");
+            scanf("%c",&month);
+            printf("Veuillez entrer le type (0 pour credit, 1 pour debit) : \n");
+            scanf("%c",&type);
+            int add_facture=ajout_facture (montant,cat,day,month,type);
+            if (add_facture == -1){
+                printf("Aucune place disponible pour les factures.\n");
+            } else {
 
-                }
+            }
             case 4 : printf("Donnez le jour et le mois : __/__\n");
-                scanf("%d",&day);
-                scanf("%d",&month);
-                int total = Calcule_jour_mois(day,month);
-                printf("Le total du %d / %d est de :%d euros.\n",day,month,total);
-                break;
+            scanf("%d",&day);
+            scanf("%d",&month);
+            int total = Calcule_jour_mois(day,month);
+            printf("Le total du %d / %d est de :%d euros.\n",day,month,total);
+            break;
 
             case 5 : printf("Entrez votre ID de facture. Si vous ne l'avez pas, tapez 1. \n");
-                scanf("%d",&ID);
-                if (ID == 1){
-                    touteslesfactures ();
-                } 
+            scanf("%d",&ID);
+            if (ID == 1){
+                touteslesfactures ();
+                printf("Quel ID choisissez-vous ? : \n");
+                scanf("%d", &ID);
+            } deleteFacture (ID);
 
+            case 6 : printf("Entrez votre ID de facture. Si vous ne l'avez pas, tapez 1. \n");
+            scanf("%d",&ID);
+            if (ID == 1){
+                touteslesfactures ();
+            } else {
+                recuperation_facture(ID);
+            }
 
+            case 7 : printf("Donnez le jour et le mois : __/__\n");
+                scanf("%d",&day);
+                scanf("%d",&month);
+                factjm (day,month);
 
+            case 8 : montant_imposable();
+            
         }
     }
 
