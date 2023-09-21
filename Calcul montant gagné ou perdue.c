@@ -1,28 +1,23 @@
-
-int CalculTotalJoursMois(int TotalGagne,int TotalDepense){
-    struct Factures liste_Facture[3];
-    int JourMoisRecherche;
-    int TotalGagne;
-    int TotalDepense;
-    for (int i = 0; i < JourMoisRecherche; i++){
-        if (Factures.date == JourMoisRecherche){
-            if (Factures.type == 0){
-                TotalGagne =+ Factures.type;
-                return TotalGagne;
-            }else{TotalDepense =+ Factures.type;
-                return TotalDepense;
+#include <stdio.h>
+#include "structure.c"
+int CalculTotalJoursMois(int JourMoisRechercher){
+    int JourMoisRechecher;
+    int somme;
+    for (int i = 0; i < 10; i++){
+        if (JourMoisRechecher ==liste_Facture[i]){
+            if (liste_Facture[i].prixHT == 0) {
+                return  somme=liste_Facture[i].prixHT;
+            } else {
+                return 0;
             }
-        }else{
+            if (JourMoisRechecher=liste_Facture[i].prixTTC == 1){
+                return somme=liste_Facture[i].prixTTC;
+            }else{
+                return 0;
+            }
+        } else {
             return 0;
         }
     }
+ return 0;
 }
-int main(){
-        int JourMoisRechecher;
-        int TotalGagne;
-        int TotalDepense;
-        printf("veuillez saisir le jour ou mois que vous desirez savoir le montant gagnat et perdue:\n");
-        scantf("%d", &JourMoisRechecher);
-        printf("le total gagné et dépensé:\n",CalculTotalJoursMois(TotalGagne,TotalDepense));
-return 0
-};
