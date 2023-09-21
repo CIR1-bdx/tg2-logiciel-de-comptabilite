@@ -1,5 +1,5 @@
 #include <stdio.h>
-//#include "structure.c"
+#include "structure.c"
 
 int Calcule_jour_mois(int daysearch, int monthsearch){
     int sommeGagne = 0;

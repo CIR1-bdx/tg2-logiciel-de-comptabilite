@@ -1,6 +1,5 @@
 
-//#include "structure.c"
-#include <stdio.h>
+#include "structure.c"
 
 int searchSpace() {
     for (int i = 0; i<10; ++i) {

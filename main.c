@@ -7,8 +7,8 @@
 #include "afficher_facture.c"
 #include "facturesjrm.c"
 #include "calcul montant imposable.c"
-#include "search_function.c"
-#include "structure.c"
+//#include "search_function.c"
+//#include "structure.c"
 #include "create_id.c"
 
 
@@ -25,6 +25,7 @@ int touteslesfactures() {
 
 
 int main () {
+    initialisation();
     while (1){
         char choice;
         printf("Que voulez-vous faire? \n");
