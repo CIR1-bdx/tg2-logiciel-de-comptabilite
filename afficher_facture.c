@@ -1,7 +1,6 @@
 #include "search_function.c"
 
 void recuperation_facture(int factureID){
-<<<<<<< Updated upstream
     int place = searchFacture(factureID);
     if (place != 1){
         if (liste_Facture[place].type == 0){
@@ -9,11 +8,6 @@ void recuperation_facture(int factureID){
         }
         else{
             printf("|Debit | ID: %d | PrixHT: %d | PrixTTC: %d | Date: %d/%d | Categorie: %c |",liste_Facture[place].ID,liste_Facture[place].prixHT,liste_Facture[place].prixTTC,liste_Facture[place].day,liste_Facture[place].month,liste_Facture[place].categorie);
-=======
-    for (int i = 0; i < 3; ++i) {
-        if (liste_Facture[i].ID == factureID){
-            printf();
->>>>>>> Stashed changes
         }
     }
     return;
