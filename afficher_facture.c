@@ -1,4 +1,4 @@
-#include "search_function.c"
+//#include "search_function.c"
 
 void recuperation_facture(int factureID){
     int place = searchFacture(factureID);

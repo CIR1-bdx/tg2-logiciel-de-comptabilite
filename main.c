@@ -7,6 +7,10 @@
 #include "afficher_facture.c"
 #include "facturesjrm.c"
 #include "calcul montant imposable.c"
+#include "search_function.c"
+#include "structure.c"
+#include "create_id.c"
+
 
 
 int touteslesfactures() {
@@ -61,7 +65,7 @@ int main () {
                 printf("Aucune place disponible pour les factures.\n");
             } else {
 
-            }
+            }break;
             case 4 : printf("Donnez le jour et le mois : __/__\n");
             scanf("%d",&day);
             scanf("%d",&month);
@@ -75,7 +79,7 @@ int main () {
                 touteslesfactures ();
                 printf("Quel ID choisissez-vous ? : \n");
                 scanf("%d", &ID);
-            } deleteFacture (ID);
+            } deleteFacture (ID);break;
 
             case 6 : printf("Entrez votre ID de facture. Si vous ne l'avez pas, tapez 1. \n");
             scanf("%d",&ID);
@@ -83,14 +87,16 @@ int main () {
                 touteslesfactures ();
             } else {
                 recuperation_facture(ID);
-            }
+            }break;
 
             case 7 : printf("Donnez le jour et le mois : __/__\n");
                 scanf("%d",&day);
                 scanf("%d",&month);
-                factjm (day,month);
+                factjm (day,month);break;
 
-            case 8 : montant_imposable();
+            case 8 : montant_imposable();break;
+
+            default: return 0;
             
         }
     }

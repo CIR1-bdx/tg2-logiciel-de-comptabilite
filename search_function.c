@@ -1,5 +1,5 @@
 
-#include "structure.c"
+//#include "structure.c"
 #include <stdio.h>
 
 int searchSpace() {

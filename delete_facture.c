@@ -1,4 +1,4 @@
-#include "structure.c"
+//#include "structure.c"
 #include <stdio.h>
 
 void deleteFacture(int factureID) {

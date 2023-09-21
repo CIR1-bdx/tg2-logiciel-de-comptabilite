@@ -1,5 +1,5 @@
 # include <stdio.h>
-# include "structure.c"
+//# include "structure.c"
 
 int montant_imposable(){
 

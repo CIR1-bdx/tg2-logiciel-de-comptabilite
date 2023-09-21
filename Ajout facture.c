@@ -1,6 +1,6 @@
-#include "search_function.c"
-#include "create_id.c"
-#include "TVA.c"
+//#include "search_function.c"
+//#include "create_id.c"
+//#include "TVA.c"
 
 
 int ajout_facture (int montant, char categorie, char day, char month, char type){
