@@ -1,7 +1,15 @@
-//
-// Created by gabriel.de-brito on 15/09/2023.
-//
+#include <stdio.h>
+
 
 float TVA(float prixHT) {
     return prixHT*1.2;
+}
+
+int calcul_TVA(){
+    float prixBase;
+    printf("Veuillez rentrer un prix HT : \n");
+    scanf("%f",&prixBase);
+    prixBase = TVA(prixBase);
+    printf("Voila le prix avec la TVA : %.2f \n", TVA(prixBase));
+    return 0;
 }
